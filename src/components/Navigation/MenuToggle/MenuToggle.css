@@ -1,0 +1,29 @@
+.MenuToggle {
+    position: fixed;
+    top: 10px;
+    left: 20px;
+    cursor: pointer;
+    width: 50px;
+    height: 42px;
+    font-size: 50px;
+    line-height: 42px;
+    display: flex;
+    color: #fff;
+    justify-content: center;
+    align-items: center;
+    transform: translateX(0px);
+    transition: all 0.3s;
+    z-index: 10;
+}
+.MenuToggle:after {
+    content: '+';
+}
+.MenuToggle:hover {
+    opacity: 0.7;
+}
+.MenuToggle.opened {
+    transform: translateX(300px);
+}
+.MenuToggle.opened:after {
+    content: '-';
+}
