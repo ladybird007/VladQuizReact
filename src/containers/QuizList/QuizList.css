@@ -1,0 +1,15 @@
+.QuizList {
+    padding: 75px 100px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    flex-grow: 1;
+    background: linear-gradient(90deg, #2cbfc6 0%, #a095e8 100%);
+}
+.QuizList li {
+    margin-bottom: 10px;
+} 
+.QuizList a {
+    font-weight: bold;
+    color: #fff;
+}
