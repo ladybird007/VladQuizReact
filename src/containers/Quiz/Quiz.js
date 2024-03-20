@@ -13,7 +13,7 @@ class Quiz extends Component {
     quiz: [
       {
         question: 'Question 1?',
-        idQuestion: 1,
+        id: 1,
         rightAnswerId: 2,
         answers: [
           {text: 'Answer 1', id: 1},
@@ -24,13 +24,24 @@ class Quiz extends Component {
       },
       {
         question: 'Question 2?',
-        idQuestion: 2,
-        rightAnswerId: 3,
+        id: 2,
+        rightAnswerId: 23,
         answers: [
-          {text: 'Answer 1', id: 1},
-          {text: 'Answer 2', id: 2},
-          {text: 'Answer 3', id: 3},
-          {text: 'Answer 4', id: 4}
+          {text: 'Answer 21', id: 21},
+          {text: 'Answer 22', id: 22},
+          {text: 'Answer 23', id: 23},
+          {text: 'Answer 24', id: 24}
+        ]
+      },
+      {
+        question: 'Question 3?',
+        id: 3,
+        rightAnswerId: 31,
+        answers: [
+          {text: 'Answer 31', id: 31},
+          {text: 'Answer 32', id: 32},
+          {text: 'Answer 33', id: 33},
+          {text: 'Answer 34', id: 34}
         ]
       }
     ]
@@ -117,8 +128,6 @@ class Quiz extends Component {
                 answerState={answerState}
               />
         }
-
-        
       </div>
     )
   } 
