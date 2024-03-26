@@ -1,0 +1,16 @@
+.Auth {
+  padding: 75px 100px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  flex-grow: 1;
+  background: linear-gradient(#e38f78 0%, #9cdb7c 100%);
+}
+.AuthForm {
+  padding: 30px;
+  background: #fff;
+  box-shadow: 3px 3px 3px rgba(0,0,0,0.2);
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+}

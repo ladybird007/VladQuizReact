@@ -4,7 +4,7 @@
     flex-direction: column;
     width: 100%;
     flex-grow: 1;
-    background: linear-gradient(90deg, #2cbfc6 0%, #a095e8 100%);
+    background: linear-gradient(#2cbfc6 0%, #a095e8 100%);
 }
 .QuizList li {
     margin-bottom: 10px;
