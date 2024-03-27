@@ -1,0 +1,23 @@
+.Select {
+  margin-bottom: 15px;
+}
+.Select label {
+  margin-bottom: 5px;
+}
+.Select select {
+  padding: 5px;
+  width: 100%;
+  transition: all 0.3s;
+  border: 1px solid #333;
+  border-radius: 3px;
+  background-color: #fff;
+}
+.Select span {
+  color: red;
+  font-size: 12px;
+  font-weight: bold;
+}
+.Select.invalid label {
+  color: red;
+}
+  
