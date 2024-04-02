@@ -105,6 +105,10 @@ class Quiz extends Component {
     })
   }
 
+  componentDidMount() {
+    console.log(this.props);
+  }
+
   render() {
     const {activeQuestion, quiz, answerState, isFinished, results} = this.state;
     return (

@@ -1,10 +1,14 @@
 import React from 'react';
 import Layout from './hoc/Layout/Layout'; 
-import {Route, Routes} from 'react-router-dom';
+import {Route, Routes, useParams} from 'react-router-dom';
 import Auth from './containers/Auth/Auth';
-import Quiz from './containers/Quiz/Quiz';
+//import Quiz from './containers/Quiz/Quiz';
 import QuizList from './containers/QuizList/QuizList';
 import QuizCreator from './containers/QuizCreator/QuizCreator';
+
+function Quiz() {
+  const { id } = useParams();
+}
 
 function App() {
   return (
