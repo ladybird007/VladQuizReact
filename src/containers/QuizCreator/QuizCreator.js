@@ -163,7 +163,7 @@ export default class QuizCreator extends Component {
                     <Button 
                       type="success" 
                       onClick={this.createQuizHandler}
-                      disabled={this.state.length === 0}
+                      disabled={this.state.quiz.length === 0}
                     >
                         Create quiz
                     </Button>
