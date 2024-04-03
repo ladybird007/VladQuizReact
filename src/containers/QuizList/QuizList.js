@@ -25,7 +25,7 @@ export default class QuizList extends Component {
 
   async componentDidMount() {
     try {
-      const response = await axios.get('https://quiz-61d92-default-rtdb.firebaseio.com/quizes');
+      const response = await axios.get('https://quiz-61d92-default-rtdb.firebaseio.com/quizes.json');
       const quizes = [];
 
       Object.keys(response.data).forEach((key, index) => {
@@ -36,12 +36,13 @@ export default class QuizList extends Component {
       });
 
       this.setState({
+        quizes,
         loading: false
       })
 
-      console.log(response);
+      console.log('response', response);
     } catch (error) {
-      console.log(error)
+      console.log('error', error)
     }
     
   } 
