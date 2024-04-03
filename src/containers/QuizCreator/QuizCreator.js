@@ -70,14 +70,23 @@ export default class QuizCreator extends Component {
       })
     }
 
-    createQuizHandler = (event) => {
+    createQuizHandler = async event => {
       event.preventDefault();
 
-      axios.post('https://quiz-61d92-default-rtdb.firebaseio.com/quizes', this.state.quiz)
-        .then(response => {
-          console.log('response', response)
+      try {
+        await axios.post(
+          'https://quiz-61d92-default-rtdb.firebaseio.com/quizes.json', 
+          this.state.quiz
+        )
+        this.setState({
+          quiz: [],
+          isFormValid: false,
+          rightAnswerId: '1',
+          formControls: createFormControls()
         })
-        .catch(error => console.log('error', error))
+      } catch (error) {
+        console.log(error);
+      }
     }
 
     changeHandler = (value, controlName) => {
@@ -127,7 +136,7 @@ export default class QuizCreator extends Component {
     render() {
       const select = <Select
         label="Check correct answer"
-        value={this.state.rightAnswer}
+        value={this.state.rightAnswerId}
         onChange={this.selectChangeHandler}
         options={[
           { text: '1', value: 1 },
@@ -138,7 +147,7 @@ export default class QuizCreator extends Component {
       />
         return (
             <div className="QuizCreator">
-              <h1>Quiz Creator</h1>
+              <h1 key="9999">QuizCreator</h1>
 
               <form className="AuthForm" onSubmit={this.submitHandler}>
                 { this.renderControls() }
