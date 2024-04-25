@@ -119,6 +119,8 @@ export function quizAnswerClick(answerId) {
         results[question.id] = 'success'
       }
 
+      console.log(state);
+
       dispatch(quizSetState({[answerId]: 'success'}, results));
 
       const timeout = window.setTimeout(() => {
@@ -130,6 +132,7 @@ export function quizAnswerClick(answerId) {
 
         window.clearTimeout(timeout);
        }, 1000);
+       
     } else {
       results[question.id] ='error';
       dispatch(quizSetState({[answerId]: 'error'}, results));
